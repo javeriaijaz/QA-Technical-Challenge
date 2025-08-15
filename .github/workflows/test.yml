@@ -1,4 +1,4 @@
-name: Run API Validation Tests
+name: Run API Tests
 
 on:
   workflow_dispatch:
@@ -20,12 +20,16 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH
+        run: |
+          echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
+
       - name: Run tests and generate HTML report
         run: |
           pytest tests/test_validation.py --html=report.html --self-contained-html -v
 
-      - name: Upload test report artifact
+      - name: Upload test report
         uses: actions/upload-artifact@v4
         with:
-          name: api-test-report
+          name: test-report
           path: report.html
