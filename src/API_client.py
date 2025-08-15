@@ -1,8 +1,16 @@
 import requests
+import os
+from dotenv import load_dotenv
+from typing import Union
 
-def get_ip_data(ip: str) -> dict | None:
+
+load_dotenv()
+
+BASE_URL = os.getenv("BASE_URL", "https://ipwho.is")
+
+def get_ip_data(ip: str) -> Union[dict, None]:
     """Fetch data from ipwho.is for the given IP. Returns None on error or failure."""
-    url = f"https://ipwho.is/{ip}"
+    url = f"{BASE_URL.rstrip('/')}/{ip}"
     try:
         response = requests.get(url, timeout=8)
         response.raise_for_status()
