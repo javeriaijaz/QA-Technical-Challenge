@@ -1,0 +1,27 @@
+ip,country,region,city,country_code,continent,latitude,longitude,postal,scenario
+8.8.8.8,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Valid IP
+1.1.1.1,Germany,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Country mismatch
+8.8.4.4,United States,Bavaria,Mountain View,US,North America,37.3860517,-122.0838511,94039,Region mismatch
+1.0.0.1,United States,California,San Jose,US,North America,37.3860517,-122.0838511,94039,City mismatch
+9.9.9.9,United States,California,Mountain View,DE,North America,37.3860517,-122.0838511,94039,Country code mismatch
+208.67.222.222,United States,California,Mountain View,US,Asia,37.3860517,-122.0838511,94039,Continent mismatch
+208.67.220.220,Narnia,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Invalid country
+4.2.2.2,United States,California,,US,North America,37.3860517,-122.0838511,94039,Missing city
+8.26.56.26,United States,,,US,North America,37.3860517,-122.0838511,94039,Missing region and city
+64.6.64.6,United States,California,Mountain View,,North America,37.3860517,-122.0838511,94039,Missing country code
+198.101.242.72,United States,California,Mountain View,US,,37.3860517,-122.0838511,94039,Missing continent
+185.228.168.9,United States,California,Mountain View,US,North America,,-122.0838511,94039,Missing latitude
+185.228.168.10,United States,California,Mountain View,US,North America,37.3860517,,94039,Missing longitude
+77.88.8.8,United States,California,Mountain View,us,North America,37.3860517,-122.0838511,94039,Lowercase country code
+91.239.100.100,United States,California,Mountain View,USA,North America,37.3860517,-122.0838511,94039,Too long country code
+149.112.112.112,United States,California,Mountain View,US,Narnia,37.3860517,-122.0838511,94039,Invalid continent
+89.233.43.71,United States,California,Mountain View,US,North America,123.456,-122.0838,94039,Latitude out of range
+199.85.126.10,United States,California,Mountain View,US,North America,37.386,200.0000,94039,Longitude out of range
+156.154.70.1,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,99999,Postal code mismatch
+195.46.39.39,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,,Missing postal
+176.103.130.130,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,12345,Invalid postal
+256.256.256.256,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Invalid IP format
+abc.def.ghi.jkl,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Invalid IP
+38.132.106.139,United States,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Mountain View,US,North America,37.3860517,-122.0838511,94039,Max length region
+45.90.28.0,United States,California,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,US,North America,37.3860517,-122.0838511,94039,Max length city
+9.9.9.11,France,California,Mountain View,DE,Europe,37.3860517,-122.0838511,94039,Conflicting country and code

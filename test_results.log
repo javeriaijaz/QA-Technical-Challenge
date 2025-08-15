@@ -1,0 +1,27 @@
+2025-08-15 10:59:39,816 | INFO | [valid ip] Testing IP: 8.8.8.8
+2025-08-15 10:59:39,816 | INFO | [valid ip] All fields matched
+2025-08-15 10:59:39,906 | INFO | [country mismatch] Testing IP: 1.1.1.1
+2025-08-15 10:59:39,990 | INFO | [region mismatch] Testing IP: 8.8.4.4
+2025-08-15 10:59:40,075 | INFO | [city mismatch] Testing IP: 1.0.0.1
+2025-08-15 10:59:40,166 | INFO | [country code mismatch] Testing IP: 9.9.9.9
+2025-08-15 10:59:40,251 | INFO | [continent mismatch] Testing IP: 208.67.222.222
+2025-08-15 10:59:40,335 | INFO | [invalid country] Testing IP: 208.67.220.220
+2025-08-15 10:59:40,419 | INFO | [missing city] Testing IP: 4.2.2.2
+2025-08-15 10:59:40,573 | INFO | [missing region and city] Testing IP: 8.26.56.26
+2025-08-15 10:59:40,769 | INFO | [missing country code] Testing IP: 64.6.64.6
+2025-08-15 10:59:40,857 | INFO | [missing continent] Testing IP: 198.101.242.72
+2025-08-15 10:59:40,949 | INFO | [missing latitude] Testing IP: 185.228.168.9
+2025-08-15 10:59:41,031 | INFO | [missing longitude] Testing IP: 185.228.168.10
+2025-08-15 10:59:41,107 | INFO | [lowercase country code] Testing IP: 77.88.8.8
+2025-08-15 10:59:41,189 | INFO | [too long country code] Testing IP: 91.239.100.100
+2025-08-15 10:59:41,272 | INFO | [invalid continent] Testing IP: 149.112.112.112
+2025-08-15 10:59:41,353 | INFO | [latitude out of range] Testing IP: 89.233.43.71
+2025-08-15 10:59:41,437 | INFO | [longitude out of range] Testing IP: 199.85.126.10
+2025-08-15 10:59:41,514 | INFO | [postal code mismatch] Testing IP: 156.154.70.1
+2025-08-15 10:59:41,595 | INFO | [missing postal] Testing IP: 195.46.39.39
+2025-08-15 10:59:41,676 | INFO | [invalid postal] Testing IP: 176.103.130.130
+2025-08-15 10:59:41,882 | INFO | [invalid ip format] Testing IP: 256.256.256.256
+2025-08-15 10:59:41,969 | INFO | [invalid ip] Testing IP: abc.def.ghi.jkl
+2025-08-15 10:59:42,054 | INFO | [max length region] Testing IP: 38.132.106.139
+2025-08-15 10:59:42,141 | INFO | [max length city] Testing IP: 45.90.28.0
+2025-08-15 10:59:42,223 | INFO | [conflicting country and code] Testing IP: 9.9.9.11
