@@ -1,4 +1,4 @@
 pytest
-requests
-pandas
 pytest-html
+requests
+python-dotenv
