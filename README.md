@@ -132,29 +132,28 @@ ip,country,region,city,country_code,continent,latitude,longitude,postal,scenario
 ## Future Improvements
 
 - **Parallel Execution with `pytest-xdist`**  
-  Enables faster execution for large datasets by distributing tests across multiple CPUs.
+  Use pytest-xdist to run tests in parallel using all CPU cores. This can significantly reduce execution time for large datasets.
 
 - **Chunked or Streaming CSV Reader**  
-  Avoid loading the entire file into memory for very large datasets.
+  Switch from reading the whole CSV at once to a streaming/chunked approach for memory efficiency with large files.
 
 - **API Throttling Handling**  
-  Add retry mechanisms, exponential backoff, or token bucket rate-limiting logic to gracefully handle API limits.
+  Add retry logic with exponential backoff to prevent tests from failing due to temporary network or rate-limit issues.
 
 - **Domain-Based Test Inputs**  
-  Extend the framework to work with other identifiers like domains or URLs instead of only IPs.
-
-- **Advanced Data Matching**  
-  Integrate fuzzy matching or NLP tools to catch near-matches or misspellings.
+  Extend tests to work with other keys (like domain names or user IDs) instead of only IPs.
 
 - **Schema-Based Validation**  
-  Use libraries like `pydantic` to enforce types and formats on API responses.
+  Use tools like pydantic to enforce correct data types and formats in API responses.
 
 - **Environment Switching**  
-  Add support for switching between staging and production APIs with environment flags.
+  Support testing against staging vs production API by using config flags or environment variables.
 
 - **Fail Notification System**  
   Integrate Slack, email, or webhook-based alerts on CI failure.
 
 - **Mock Server Integration**  
-  Enable running tests offline or against controlled test data.
+  Create a mock server to simulate API responses locally—useful for offline testing or developing without hitting the live API.
+
+
 
