@@ -1,7 +1,7 @@
 import csv
 import pytest
 from src.API_client import get_ip_data
-from src.logger_util import get_logger
+from utils.logger import get_logger
 
 CSV_FILE_PATH = "data/expected.csv"
 logger = get_logger()
