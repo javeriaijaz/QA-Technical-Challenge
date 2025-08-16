@@ -151,7 +151,7 @@ ip,country,region,city,country_code,continent,latitude,longitude,postal,scenario
 
 ## Future Improvements
 
--**Support for Authorized APIs**
+- **Support for Authorized APIs**
   Extend the framework to handle APIs that require authentication (e.g., API keys, bearer tokens, OAuth). This would involve configuring headers or tokens via environment variables and securely injecting them during test execution. While a public API was chosen for simplicity, integrating a secured API would make the solution more production-ready.
 
 - **Parallel Execution with `pytest-xdist`**  
