@@ -3,6 +3,7 @@ from playwright.sync_api import APIRequestContext
 from utils.logger import get_logger
 
 logger = get_logger()
+#Loading the API URL from env file
 BASE_URL = os.getenv("API_BASE_URL", "https://ipwho.is")
 
 def get_api_data(ip: str, request_context: APIRequestContext):
