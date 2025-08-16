@@ -7,6 +7,18 @@ This hybrid setup demonstrates a clean and scalable API testing framework using 
 
 ---
 
+## Features
+
+- Hybrid Python + Playwright API testing framework
+- Parametrized test execution with dynamic scenario labeling
+- Field-level validation of structured API responses
+- Centralized logging for traceability and debugging
+- HTML report generation via `pytest-html`
+- CI integration via GitHub Actions
+- Easy environment switching via `.env` config
+
+---
+
 ## What This Covers (Based on Assignment Instructions)
 
 ### 1. Test Automation for External API with Expected CSV Values
