@@ -35,9 +35,12 @@ The `ipwho.is` API was chosen due to its:
 
 ### 5. Assumptions Made
 - Every row in `expected.csv` contains an IP and a scenario label.
-- Fields like latitude, postal code, etc., may be missing depending on IP region.
-- The `.env` file contains the `BASE_URL`, which defaults to `https://ipwho.is`.
-- Each IP is treated as a unique, independent test case.
+- Since there’s no fixed schema or validation criteria provided, I assumed each row in the CSV represents a different test case or scenario — and that I'm free to define what constitutes "valid" or "invalid" in each case.
+- It wasn’t clear how extensive the test scenarios should be, so I aimed to cover both happy paths and edge cases (e.g.,    invalid IPs, missing fields, mismatched values) based on what a QA team might actually care about in production.
+- No mention of which tools or frameworks to use, so I went with Python + pytest because of its readability, ecosystem, and good support for CI — and added Playwright for its request API (as an alternative to requests) to show extensibility.
+- I assumed that structured output and reporting were expected, even if not stated, so I built in HTML reports and logging to demonstrate test visibility and traceability.
+- The phrase “validate against expected values” didn’t restrict how deep the comparison should be (e.g., strict vs fuzzy match), so I built strict equality checks while leaving room to extend to more advanced logic (e.g., fuzzy matching, range validation).
+- There was no restriction on file structure or test style, so I modularized it into clean components (validators, logger, test runner) as I would in a real project
 
 ---
 
@@ -136,11 +139,26 @@ ip,country,region,city,country_code,continent,latitude,longitude,postal,scenario
 
 ## Future Improvements
 
-- **Parallel Testing** via `pytest-xdist`
-- **Better CSV Handling** for huge datasets
-- **Retry Mechanism** for flaky API responses
-- **Domain / URL Testing** (beyond IPs)
-- **pydantic Schema Validation** for strict structure checks
-- **Support for Multiple Environments** via env switches
-- **Slack/Webhook Fail Alerts**
-- **Mock API Integration** using Playwright route mocking or local Flask server
+- **Parallel Execution with `pytest-xdist`**  
+  Use pytest-xdist to run tests in parallel using all CPU cores. This can significantly reduce execution time for large datasets.
+
+- **Allure Reporting Integration**
+  Use Allure for richer, interactive test reports with visual steps, attachments, and trends over time.
+
+- **Chunked or Streaming CSV Reader**  
+  Switch from reading the whole CSV at once to a streaming/chunked approach for memory efficiency with large files.
+
+- **API Throttling Handling**  
+  Add retry logic with exponential backoff to prevent tests from failing due to temporary network or rate-limit issues.
+
+- **Domain-Based Test Inputs**  
+  Extend tests to work with other keys (like domain names or user IDs) instead of only IPs.
+
+- **Environment Switching**  
+  Support testing against staging vs production API by using config flags or environment variables.
+
+- **Fail Notification System**  
+  Integrate Slack, email, or webhook-based alerts on CI failure.
+
+- **Mock Server Integration**  
+  Create a mock server to simulate API responses locally—useful for offline testing or developing without hitting the live API.
