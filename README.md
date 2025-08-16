@@ -7,7 +7,7 @@ This hybrid setup demonstrates a clean and scalable API testing framework using 
 
 ---
 
-## ✅ Two Solution Variants
+## Two Solution Variants
 
 This project demonstrates **two approaches** to solving the same problem:
 
