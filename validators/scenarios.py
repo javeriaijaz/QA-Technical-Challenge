@@ -56,7 +56,7 @@ def validate_conflicting_country_and_code(actual, row):
         actual.get("country_code") == row["country_code"]
     ), "Conflicting country and code should not match"
 
-# --------- Scenario Map --------- #
+# - Scenario Map - #
 
 SCENARIO_FUNCTIONS = {
     "valid ip": validate_valid_ip,

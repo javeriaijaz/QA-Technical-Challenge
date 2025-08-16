@@ -8,7 +8,7 @@ from validators.scenarios import SCENARIO_FUNCTIONS
 CSV_FILE_PATH = "data/expected.csv"
 logger = get_logger()
 
-# Load all rows from the expected.csv file into memory
+# Load all rows from the expected.csv file
 def load_test_cases():
     with open(CSV_FILE_PATH, newline="") as csvfile:
         reader = csv.DictReader(csvfile)
