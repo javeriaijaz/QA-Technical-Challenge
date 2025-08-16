@@ -7,6 +7,21 @@ This hybrid setup demonstrates a clean and scalable API testing framework using 
 
 ---
 
+## ✅ Two Solution Variants
+
+This project demonstrates **two approaches** to solving the same problem:
+
+- **Playwright-based API Testing** (Main branch)  
+  Uses Playwright’s `APIRequestContext` to simulate API calls as if triggered from a browser.  
+  _Useful for testing browser-originated API requests or enforcing CORS/security testing._
+  Scalable: This setup can be easily extended to include UI automation tests alongside API validations, enabling full-stack end-to-end testing within the same framework.
+
+- **Requests-based Classic Testing** (see `just-python-variant` branch)  
+  Uses Python’s standard `requests` library for simple API validations.  
+  _Faster setup and simpler logic for purely backend/API-focused testing._
+
+---
+
 ## Features
 
 - Hybrid Python + Playwright API testing framework
