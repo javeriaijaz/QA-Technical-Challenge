@@ -31,13 +31,13 @@ The goal is to ensure the accuracy, completeness, and consistency of the data re
 - GitHub Actions CI runs the tests and uploads the report as an artifact.
 
 ### 5. Assumptions Made
-- The API always returns a JSON response with field names that exactly match the headers in the `expected.csv`.
-- Each IP address in the CSV uniquely identifies a test scenario and is used to query the API.
-- For invalid or malformed IPs, the API might return `None` or only a partial response.
-- Fields like `continent`, `postal`, `latitude`, etc., may be missing for some IPs—this is expected and tested.
-- The API’s behavior is assumed stable and not affected by regional changes or rate limiting during test execution.
-- The `scenario` column reliably indicates which validation logic to apply per row.
-- The data in `expected.csv` is considered ground truth for validating results.
+- Every row in `expected.csv` contains an IP and a scenario label.
+- Since there’s no fixed schema or validation criteria provided, I assumed each row in the CSV represents a different test case or scenario — and that I'm free to define what constitutes "valid" or "invalid" in each case.
+- It wasn’t clear how extensive the test scenarios should be, so I aimed to cover both happy paths and edge cases (e.g.,    invalid IPs, missing fields, mismatched values) based on what a QA team might actually care about in production.
+- No mention of which tools or frameworks to use, so I went with Python + pytest because of its readability, ecosystem, and good support for CI.
+- I assumed that structured output and reporting were expected, even if not stated, so I built in HTML reports and logging to demonstrate test visibility and traceability.
+- The phrase “validate against expected values” didn’t restrict how deep the comparison should be (e.g., strict vs fuzzy match), so I built strict equality checks while leaving room to extend to more advanced logic (e.g., fuzzy matching, range validation).
+- There was no restriction on file structure or test style, so I modularized it into clean components (validators, logger, test runner) as I would in a real project
 
 ---
 
@@ -146,9 +146,6 @@ ip,country,region,city,country_code,continent,latitude,longitude,postal,scenario
 
 - **Domain-Based Test Inputs**  
   Extend tests to work with other keys (like domain names or user IDs) instead of only IPs.
-
-- **Schema-Based Validation**  
-  Use tools like pydantic to enforce correct data types and formats in API responses.
 
 - **Environment Switching**  
   Support testing against staging vs production API by using config flags or environment variables.
