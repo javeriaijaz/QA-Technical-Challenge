@@ -14,6 +14,7 @@ This project demonstrates **two approaches** to solving the same problem:
 - **Playwright-based API Testing** (Main branch)  
   Uses Playwright’s `APIRequestContext` to simulate API calls as if triggered from a browser.  
   _Useful for testing browser-originated API requests or enforcing CORS/security testing._
+  
   Scalable: This setup can be easily extended to include UI automation tests alongside API validations, enabling full-stack end-to-end testing within the same framework.
 
 - **Requests-based Classic Testing** (see `just-python-variant` branch)  
