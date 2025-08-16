@@ -1,27 +1,38 @@
 ip,country,region,city,country_code,continent,latitude,longitude,postal,scenario
 8.8.8.8,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Valid IP
-1.1.1.1,Germany,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Country mismatch
-8.8.4.4,United States,Bavaria,Mountain View,US,North America,37.3860517,-122.0838511,94039,Region mismatch
-1.0.0.1,United States,California,San Jose,US,North America,37.3860517,-122.0838511,94039,City mismatch
-9.9.9.9,United States,California,Mountain View,DE,North America,37.3860517,-122.0838511,94039,Country code mismatch
-208.67.222.222,United States,California,Mountain View,US,Asia,37.3860517,-122.0838511,94039,Continent mismatch
-208.67.220.220,Narnia,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Invalid country
-4.2.2.2,United States,California,,US,North America,37.3860517,-122.0838511,94039,Missing city
-8.26.56.26,United States,,,US,North America,37.3860517,-122.0838511,94039,Missing region and city
-64.6.64.6,United States,California,Mountain View,,North America,37.3860517,-122.0838511,94039,Missing country code
-198.101.242.72,United States,California,Mountain View,US,,37.3860517,-122.0838511,94039,Missing continent
-185.228.168.9,United States,California,Mountain View,US,North America,,-122.0838511,94039,Missing latitude
-185.228.168.10,United States,California,Mountain View,US,North America,37.3860517,,94039,Missing longitude
-77.88.8.8,United States,California,Mountain View,us,North America,37.3860517,-122.0838511,94039,Lowercase country code
-91.239.100.100,United States,California,Mountain View,USA,North America,37.3860517,-122.0838511,94039,Too long country code
-149.112.112.112,United States,California,Mountain View,US,Narnia,37.3860517,-122.0838511,94039,Invalid continent
-89.233.43.71,United States,California,Mountain View,US,North America,123.456,-122.0838,94039,Latitude out of range
-199.85.126.10,United States,California,Mountain View,US,North America,37.386,200.0000,94039,Longitude out of range
-156.154.70.1,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,99999,Postal code mismatch
-195.46.39.39,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,,Missing postal
+256.256.256.256,Invalid,N/A,N/A,N/A,N/A,0.0,0.0,00000,Invalid IP format
+abc.def.ghi.jkl,Invalid,N/A,N/A,N/A,N/A,0.0,0.0,00000,Invalid IP
+"",N/A,N/A,N/A,N/A,N/A,0.0,0.0,00000,Empty IP input
+127.0.0.1,Localhost,N/A,N/A,LO,Local,0.0,0.0,00000,Loopback IP
+192.168.0.1,Private Network,N/A,N/A,PR,Local,0.0,0.0,00000,Private IP range
+255.255.255.255,Reserved,N/A,N/A,RS,Unknown,0.0,0.0,00000,Broadcast IP address
+::1,N/A,N/A,N/A,N/A,N/A,0.0,0.0,00000,IPv6 loopback address
+2001:4860:4860::8888,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Valid IPv6 address
+8.8.8.8:53,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,IP with port number (should be rejected)
+1.1.1.1,Germany,Bavaria,Munich,DE,Europe,48.1351,11.5820,80331,Country mismatch
+9.9.9.9,Germany,Bavaria,Munich,FR,Europe,48.1351,11.5820,80331,Country code mismatch
+208.67.222.222,Germany,Bavaria,Munich,DE,Asia,48.1351,11.5820,80331,Continent mismatch
+208.67.220.220,Narnia,Bavaria,Munich,DE,Europe,48.1351,11.5820,80331,Invalid country
+1.0.0.1,Germany,Bavaria,Berlin,DE,Europe,52.52,13.4050,10115,City mismatch
+8.8.4.4,United States,Texas,Mountain View,US,North America,37.3860517,-122.0838511,94039,Region mismatch
+4.2.2.2,Germany,Bavaria,,DE,Europe,48.1351,11.5820,80331,Missing city
+8.26.56.26,Germany,,,DE,Europe,48.1351,11.5820,80331,Missing region and city
+64.6.64.6,Germany,Bavaria,Munich,,Europe,48.1351,11.5820,80331,Missing country code
+198.101.242.72,Germany,Bavaria,Munich,DE,,48.1351,11.5820,80331,Missing continent
+185.228.168.9,Germany,Bavaria,Munich,DE,Europe,,-11.5820,80331,Missing latitude
+185.228.168.10,Germany,Bavaria,Munich,DE,Europe,48.1351,,80331,Missing longitude
+91.239.100.100,Germany,Bavaria,Munich,DEU,Europe,48.1351,11.5820,80331,Too long country code
+149.112.112.112,Germany,Bavaria,Munich,DE,Narnia,48.1351,11.5820,80331,Invalid continent
+89.233.43.71,Germany,Bavaria,Munich,DE,Europe,123.456,11.5820,80331,Latitude out of range
+199.85.126.10,Germany,Bavaria,Munich,DE,Europe,48.1351,200.0000,80331,Longitude out of range
+156.154.70.1,Germany,Bavaria,Munich,DE,Europe,48.1351,11.5820,99999,Postal code mismatch
+195.46.39.39,Germany,Bavaria,Munich,DE,Europe,48.1351,11.5820,,Missing postal
+38.132.106.139,Germany,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Munich,DE,Europe,48.1351,11.5820,80331,Max length region
+45.90.28.0,Germany,Bavaria,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,DE,Europe,48.1351,11.5820,80331,Max length city
+198.51.100.2,United States,California,San Jose,US,North America,37.3382,-121.8863,12345-6789,Valid postal extended
+198.51.100.4,United States,California,Oakland,US,North America,37.8044,-122.2711,123456789,No dash in ZIP+4
+198.51.100.5,United States,California,Sacramento,US,North America,38.5816,-121.4944,ABCDE,Non-numeric postal
+198.51.100.9,United States,California,Palo Alto,US,North America,3740522,-122.1430,94301,Invalid latitude format without decimal
+198.51.100.10,United States,California,Sunnyvale,US,North America,37.3688,-1221430,94085,Invalid longitude format
+9.9.9.11,France,Brittany,Rennes,DE,Europe,48.1173,-1.6778,35000,Conflicting country and code
 176.103.130.130,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,12345,Invalid postal
-256.256.256.256,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Invalid IP format
-abc.def.ghi.jkl,United States,California,Mountain View,US,North America,37.3860517,-122.0838511,94039,Invalid IP
-38.132.106.139,United States,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Mountain View,US,North America,37.3860517,-122.0838511,94039,Max length region
-45.90.28.0,United States,California,BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,US,North America,37.3860517,-122.0838511,94039,Max length city
-9.9.9.11,France,California,Mountain View,DE,Europe,37.3860517,-122.0838511,94039,Conflicting country and code

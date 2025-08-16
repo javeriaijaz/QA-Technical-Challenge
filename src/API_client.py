@@ -1,31 +1,38 @@
-import requests
 import os
-from dotenv import load_dotenv
-from typing import Union
+from playwright.sync_api import APIRequestContext
+from utils.logger import get_logger
 
+logger = get_logger()
+BASE_URL = os.getenv("API_BASE_URL", "https://ipwho.is")
 
-load_dotenv()
-
-BASE_URL = os.getenv("BASE_URL", "https://ipwho.is")
-
-def get_ip_data(ip: str) -> Union[dict, None]:
-    """Fetch data from ipwho.is for the given IP. Returns None on error or failure."""
-    url = f"{BASE_URL.rstrip('/')}/{ip}"
+def get_api_data(ip: str, request_context: APIRequestContext):
     try:
-        response = requests.get(url, timeout=8)
-        response.raise_for_status()
+        response = request_context.get(f"/{ip}")
+
+        if not response.ok:
+            logger.error(f"[{ip}] API response status: {response.status}")
+            return {
+                "ip": ip,
+                "success": False,
+                "message": f"HTTP Error: {response.status}"
+            }
+
         data = response.json()
+
         if not data.get("success", True):
-            return None
+            logger.warning(f"[{ip}] API returned unsuccessful status: {data.get('message')}")
+            return {
+                "ip": ip,
+                "success": False,
+                "message": data.get("message", "Unknown API error")
+            }
+
+        return data
+
+    except Exception as e:
+        logger.exception(f"Exception while fetching IP data for {ip}")
         return {
-            "country": data.get("country"),
-            "region": data.get("region"),
-            "city": data.get("city"),
-            "country_code": data.get("country_code"),
-            "continent": data.get("continent"),
-            "latitude": str(data.get("latitude")),
-            "longitude": str(data.get("longitude")),
-            "postal": str(data.get("postal"))
+            "ip": ip,
+            "success": False,
+            "message": f"Exception occurred: {str(e)}"
         }
-    except (requests.RequestException, ValueError):
-        return None
