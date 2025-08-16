@@ -1,48 +1,48 @@
-2025-08-16 15:24:06,251 | INFO | [valid ip] Testing IP: 8.8.8.8
-2025-08-16 15:24:06,484 | INFO | [invalid ip format] Testing IP: 256.256.256.256
-2025-08-16 15:24:06,520 | WARNING | [256.256.256.256] API returned unsuccessful status: Invalid IP address
-2025-08-16 15:24:06,524 | INFO | [invalid ip] Testing IP: abc.def.ghi.jkl
-2025-08-16 15:24:06,557 | WARNING | [abc.def.ghi.jkl] API returned unsuccessful status: Invalid IP address
-2025-08-16 15:24:06,560 | INFO | [loopback ip] Testing IP: 127.0.0.1
-2025-08-16 15:24:06,593 | WARNING | [127.0.0.1] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:06,595 | INFO | [private ip range] Testing IP: 192.168.0.1
-2025-08-16 15:24:06,628 | WARNING | [192.168.0.1] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:06,630 | INFO | [broadcast ip address] Testing IP: 255.255.255.255
-2025-08-16 15:24:06,662 | WARNING | [255.255.255.255] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:06,665 | INFO | [ipv6 loopback address] Testing IP: ::1
-2025-08-16 15:24:06,705 | WARNING | [::1] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:06,707 | INFO | [valid ipv6 address] Testing IP: 2001:4860:4860::8888
-2025-08-16 15:24:06,742 | INFO | [ip with port number (should be rejected)] Testing IP: 8.8.8.8:53
-2025-08-16 15:24:06,776 | WARNING | [8.8.8.8:53] API returned unsuccessful status: Invalid IP address
-2025-08-16 15:24:06,778 | INFO | [country mismatch] Testing IP: 1.1.1.1
-2025-08-16 15:24:06,814 | INFO | [country code mismatch] Testing IP: 9.9.9.9
-2025-08-16 15:24:06,849 | INFO | [continent mismatch] Testing IP: 208.67.222.222
-2025-08-16 15:24:06,883 | INFO | [invalid country] Testing IP: 208.67.220.220
-2025-08-16 15:24:06,921 | INFO | [city mismatch] Testing IP: 1.0.0.1
-2025-08-16 15:24:06,956 | INFO | [region mismatch] Testing IP: 8.8.4.4
-2025-08-16 15:24:06,993 | INFO | [missing city] Testing IP: 4.2.2.2
-2025-08-16 15:24:07,027 | INFO | [missing region and city] Testing IP: 8.26.56.26
-2025-08-16 15:24:07,062 | INFO | [missing country code] Testing IP: 64.6.64.6
-2025-08-16 15:24:07,098 | INFO | [missing continent] Testing IP: 198.101.242.72
-2025-08-16 15:24:07,134 | INFO | [missing latitude] Testing IP: 185.228.168.9
-2025-08-16 15:24:07,170 | INFO | [missing longitude] Testing IP: 185.228.168.10
-2025-08-16 15:24:07,205 | INFO | [too long country code] Testing IP: 91.239.100.100
-2025-08-16 15:24:07,240 | INFO | [invalid continent] Testing IP: 149.112.112.112
-2025-08-16 15:24:07,273 | INFO | [latitude out of range] Testing IP: 89.233.43.71
-2025-08-16 15:24:07,307 | INFO | [longitude out of range] Testing IP: 199.85.126.10
-2025-08-16 15:24:07,342 | INFO | [postal code mismatch] Testing IP: 156.154.70.1
-2025-08-16 15:24:07,376 | INFO | [missing postal] Testing IP: 195.46.39.39
-2025-08-16 15:24:07,409 | INFO | [max length region] Testing IP: 38.132.106.139
-2025-08-16 15:24:07,442 | INFO | [max length city] Testing IP: 45.90.28.0
-2025-08-16 15:24:07,475 | INFO | [valid postal extended] Testing IP: 198.51.100.2
-2025-08-16 15:24:07,507 | WARNING | [198.51.100.2] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:07,509 | INFO | [no dash in zip+4] Testing IP: 198.51.100.4
-2025-08-16 15:24:07,541 | WARNING | [198.51.100.4] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:07,543 | INFO | [non-numeric postal] Testing IP: 198.51.100.5
-2025-08-16 15:24:07,573 | WARNING | [198.51.100.5] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:07,576 | INFO | [invalid latitude format without decimal] Testing IP: 198.51.100.9
-2025-08-16 15:24:07,610 | WARNING | [198.51.100.9] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:07,613 | INFO | [invalid longitude format] Testing IP: 198.51.100.10
-2025-08-16 15:24:07,643 | WARNING | [198.51.100.10] API returned unsuccessful status: Reserved range
-2025-08-16 15:24:07,645 | INFO | [conflicting country and code] Testing IP: 9.9.9.11
-2025-08-16 15:24:07,679 | INFO | [invalid postal] Testing IP: 176.103.130.130
+2025-08-16 17:06:15,735 | INFO | [valid ip] Testing IP: 8.8.8.8
+2025-08-16 17:06:15,953 | INFO | [invalid ip format] Testing IP: 256.256.256.256
+2025-08-16 17:06:15,985 | WARNING | [256.256.256.256] API returned unsuccessful status: Invalid IP address
+2025-08-16 17:06:15,987 | INFO | [invalid ip] Testing IP: abc.def.ghi.jkl
+2025-08-16 17:06:16,017 | WARNING | [abc.def.ghi.jkl] API returned unsuccessful status: Invalid IP address
+2025-08-16 17:06:16,020 | INFO | [loopback ip] Testing IP: 127.0.0.1
+2025-08-16 17:06:16,051 | WARNING | [127.0.0.1] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:16,053 | INFO | [private ip range] Testing IP: 192.168.0.1
+2025-08-16 17:06:16,085 | WARNING | [192.168.0.1] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:16,088 | INFO | [broadcast ip address] Testing IP: 255.255.255.255
+2025-08-16 17:06:16,121 | WARNING | [255.255.255.255] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:16,123 | INFO | [ipv6 loopback address] Testing IP: ::1
+2025-08-16 17:06:16,157 | WARNING | [::1] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:16,160 | INFO | [invalid postal] Testing IP: 176.103.130.130
+2025-08-16 17:06:16,196 | INFO | [valid ipv6 address] Testing IP: 2001:4860:4860::8888
+2025-08-16 17:06:16,233 | INFO | [ip with port number (should be rejected)] Testing IP: 8.8.8.8:53
+2025-08-16 17:06:16,266 | WARNING | [8.8.8.8:53] API returned unsuccessful status: Invalid IP address
+2025-08-16 17:06:16,268 | INFO | [country mismatch] Testing IP: 1.1.1.1
+2025-08-16 17:06:16,303 | INFO | [country code mismatch] Testing IP: 9.9.9.9
+2025-08-16 17:06:16,339 | INFO | [continent mismatch] Testing IP: 208.67.222.222
+2025-08-16 17:06:16,373 | INFO | [invalid country] Testing IP: 208.67.220.220
+2025-08-16 17:06:16,407 | INFO | [city mismatch] Testing IP: 1.0.0.1
+2025-08-16 17:06:16,440 | INFO | [region mismatch] Testing IP: 8.8.4.4
+2025-08-16 17:06:16,472 | INFO | [missing city] Testing IP: 4.2.2.2
+2025-08-16 17:06:16,505 | INFO | [missing region and city] Testing IP: 8.26.56.26
+2025-08-16 17:06:16,538 | INFO | [missing country code] Testing IP: 64.6.64.6
+2025-08-16 17:06:16,572 | INFO | [missing continent] Testing IP: 198.101.242.72
+2025-08-16 17:06:16,604 | INFO | [missing latitude] Testing IP: 185.228.168.9
+2025-08-16 17:06:16,637 | INFO | [missing longitude] Testing IP: 185.228.168.10
+2025-08-16 17:06:16,673 | INFO | [too long country code] Testing IP: 91.239.100.100
+2025-08-16 17:06:16,705 | INFO | [invalid continent] Testing IP: 149.112.112.112
+2025-08-16 17:06:16,736 | INFO | [latitude out of range] Testing IP: 89.233.43.71
+2025-08-16 17:06:16,769 | INFO | [longitude out of range] Testing IP: 199.85.126.10
+2025-08-16 17:06:16,803 | INFO | [postal code mismatch] Testing IP: 156.154.70.1
+2025-08-16 17:06:16,939 | INFO | [missing postal] Testing IP: 195.46.39.39
+2025-08-16 17:06:16,978 | INFO | [max length region] Testing IP: 38.132.106.139
+2025-08-16 17:06:17,018 | INFO | [max length city] Testing IP: 45.90.28.0
+2025-08-16 17:06:17,055 | INFO | [valid postal extended] Testing IP: 198.51.100.2
+2025-08-16 17:06:17,086 | WARNING | [198.51.100.2] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:17,089 | INFO | [no dash in zip+4] Testing IP: 198.51.100.4
+2025-08-16 17:06:17,120 | WARNING | [198.51.100.4] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:17,122 | INFO | [non-numeric postal] Testing IP: 198.51.100.5
+2025-08-16 17:06:17,154 | WARNING | [198.51.100.5] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:17,157 | INFO | [invalid latitude format without decimal] Testing IP: 198.51.100.9
+2025-08-16 17:06:17,188 | WARNING | [198.51.100.9] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:17,191 | INFO | [invalid longitude format] Testing IP: 198.51.100.10
+2025-08-16 17:06:17,223 | WARNING | [198.51.100.10] API returned unsuccessful status: Reserved range
+2025-08-16 17:06:17,225 | INFO | [conflicting country and code] Testing IP: 9.9.9.11
