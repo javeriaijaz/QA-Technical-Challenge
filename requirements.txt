@@ -1,4 +1,4 @@
-playwright==1.46.0
 pytest
 pytest-html
 python-dotenv
+playwright==1.46.0
